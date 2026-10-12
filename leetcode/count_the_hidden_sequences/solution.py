@@ -1,9 +1,7 @@
 class Solution:
     # Time: O(n)
     # Space: O(1)
-    def numberOfArrays(  # noqa: N802
-        self, differences: list[int], lower: int, upper: int
-    ) -> int:
+    def number_of_arrays(self, differences: list[int], lower: int, upper: int) -> int:
         offset = 0
         min_offset = 0
         max_offset = 0

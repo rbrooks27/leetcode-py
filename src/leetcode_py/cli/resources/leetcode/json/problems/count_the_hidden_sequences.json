@@ -28,7 +28,7 @@
     "helpers_content": "",
     "helpers_run_name": "number_of_arrays",
     "helpers_run_signature": "(solution_class: type, differences: list[int], lower: int, upper: int)",
-    "helpers_run_body": "    implementation = solution_class()\n    return implementation.numberOfArrays(differences, lower, upper)",
+    "helpers_run_body": "    implementation = solution_class()\n    return implementation.number_of_arrays(differences, lower, upper)",
     "helpers_assert_name": "number_of_arrays",
     "helpers_assert_signature": "(result: int, expected: int) -> bool",
     "helpers_assert_body": "    assert result == expected\n    return True",
@@ -42,9 +42,9 @@
     "_solution_methods": {
         "list": [
             {
-                "name": "numberOfArrays",
+                "name": "number_of_arrays",
                 "signature": "(self, differences: list[int], lower: int, upper: int) -> int",
-                "body": "        # TODO: Implement numberOfArrays\n        return 0"
+                "body": "        # TODO: Implement number_of_arrays\n        return 0"
             }
         ]
     },
