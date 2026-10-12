@@ -9,6 +9,7 @@ from typing import Annotated
 import typer
 from bake import command, console
 from bakelib import GitHubActionsTools, PythonLibSpace
+from bakelib._params import DurationsOption
 from rich.panel import Panel
 from rich.syntax import Syntax
 from rich.text import Text
@@ -41,9 +42,9 @@ class MyBakebook(GitHubActionsTools, PythonLibSpace):
             self.ctx.run("uv run python scripts/gen_problems.py")
         super().lint()
 
-    def test(self) -> None:
+    def test(self, durations: DurationsOption = None) -> None:
         tests_paths: list[str] = ["tests/", "leetcode/"]
-        self._test(tests_paths=tests_paths)
+        self._test(tests_paths=tests_paths, durations=durations)
 
     def is_problem_exist(self, problem: str) -> Path:
         problem_path = Path(f"leetcode/{problem}")
